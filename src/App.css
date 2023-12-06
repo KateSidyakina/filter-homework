@@ -18,9 +18,15 @@ body{
   border: 1px solid #000000;
   background-color: #ffffff;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .button:hover {
+  background-color: #383837;
+  color: #ffffff;
+}
+
+.button.active {
   background-color: #383837;
   color: #ffffff;
 }

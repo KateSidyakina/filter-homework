@@ -9,8 +9,8 @@ export default class ProjectList extends React.Component {
   render() {
     return (
       <div className='projects'>
-        {this.props.projects.map((item) => {
-          return <img className='img' src={item.img} alt={item.category} />
+        {this.props.projects.map((item, index) => {
+          return <img key={index + item.img} className='img' src={item.img} alt={item.category} />
         })}
       </div>
     )

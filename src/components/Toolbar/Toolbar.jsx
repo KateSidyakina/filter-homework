@@ -10,7 +10,15 @@ export default class Toolbar extends React.Component {
     return (
       <div>
         {this.props.filters.map((item) => {
-          return <button className='button' onClick={() => this.props.onSelectFilter(item)}>{item}</button>
+          return (
+            <button
+              key={item}
+              className={`button${this.props.selected === item ? ' active' : ''}`} 
+              onClick={() => this.props.onSelectFilter(item)}
+            >
+                {item}
+            </button>
+          )
         })}
       </div>
     )
